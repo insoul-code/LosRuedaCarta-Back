@@ -1,0 +1,26 @@
+jasypt:
+   encryptor:
+      password: ${jasyptpwd}
+      algorithm: PBEWithMD5AndDES
+
+server:
+   port: 8083
+   servlet:
+      context-path: /menu
+
+tiempoHealthCheck:
+   tiempo: 50000  
+
+#Public key de grupo de usuarios en cognito
+cognito:
+   public:
+      key: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_6MOzup9sb/.well-known/jwks.json
+   connection:
+      time:
+         out: 2000
+   read:
+      time:
+         out: 2000
+
+endpoint:
+   security: /usuarios/
